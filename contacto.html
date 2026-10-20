@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contáctanos y Equipo | Proyecto NyE</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-oscuro">
+  <header>
+    <a href="index.html" class="logo">
+      <img src="img/logo.png" alt="Logo NyE">
+      <span class="logo-texto">Normas y Estándares</span>
+    </a>
+    <nav class="enlaces-menu">
+      <a href="index.html">Inicio</a>
+      <a href="saber-mas.html">Saber más</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="contacto.html">Contáctanos</a>
+      <a href="login.html" class="btn-login-menu">Iniciar sesión</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. SECCIÓN DE CONTACTO Y REDES -->
+    <div class="layout-2col">
+      <!-- Izquierda: Formulario en tarjeta blanca limpia -->
+      <section class="caja-clara">
+        <h1 style="font-size: 30px; color: #071f36; margin-bottom: 8px;">Contáctanos</h1>
+        <p style="color: #475569; margin-bottom: 22px;">Cuéntanos tu duda o sugerencia. Te responderemos en 24 o 48 horas.</p>
+
+        <form action="#" method="post" class="form-interactivo">
+          <div class="form-grupo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+          </div>
+
+          <div class="form-grupo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+          </div>
+
+          <div class="form-grupo">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" placeholder="Motivo de tu consulta" required>
+          </div>
+
+          <div class="form-grupo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+
+          <div class="form-grupo" style="display: flex; align-items: center; gap: 10px;">
+            <input type="checkbox" id="captcha" name="captcha" style="width: 20px; height: 20px;" required>
+            <label for="captcha" style="margin: 0; cursor: pointer;">No soy un robot (captcha)</label>
+          </div>
+
+          <button type="submit" class="btn-principal">Enviar mensaje</button>
+          <div class="mensaje-exito">¡Mensaje enviado correctamente! Gracias por comunicarte con NyE.</div>
+        </form>
+      </section>
+
+      <!-- Derecha: Datos de contacto y Redes Sociales -->
+      <aside class="caja-clara">
+        <h2 style="font-size: 24px; color: #071f36; margin-bottom: 18px;">Otras formas de contacto</h2>
+        <ul style="display: flex; flex-direction: column; gap: 14px; color: #334155;">
+          <li><strong>Correo:</strong> <a href="mailto:NyE.of.cybersecurity@tuproyecto.com" style="color: #118AC5; font-weight: 700;">NyE.of.cybersecurity@tuproyecto.com</a></li>
+          <li><strong>Teléfono:</strong> <a href="tel:+51967670670" style="color: #118AC5; font-weight: 700;">+51 967 670 670</a></li>
+          <li><strong>Usuario oficial:</strong> @NyE.of.cybersecurity</li>
+          <li><strong>Horario:</strong> Lunes a viernes, 9:00 a 18:00</li>
+        </ul>
+
+        <h3 style="font-size: 18px; color: #071f36; margin-top: 26px;">Nuestras Redes Sociales</h3>
+        <div class="grid-redes">
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="btn-red">▶ YouTube</a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="btn-red">f Facebook</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-red">◎ Instagram</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-red">in LinkedIn</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- 2. SECCIÓN ¿QUIÉNES SOMOS? (LOS 5 INTEGRANTES DEL PROYECTO) -->
+    <div class="titulo-seccion">
+      <h2>¿Quiénes somos? — Equipo del Proyecto NyE</h2>
+      <p>Integrantes responsables del desarrollo e investigación del portal web</p>
+    </div>
+
+    <section class="grid-equipo">
+      <!-- INTEGRANTE 1: Pon su foto en img/integrante1.jpg y cambia el nombre en <h3> -->
+      <article class="card-miembro">
+        <div class="foto-miembro">
+          <img src="img/integrante1.jpg" alt="Integrante 1" onerror="this.src='img/logo.png'">
+        </div>
+        <h3>Willy Dahir Huaman Paucar</h3>
+        <span>Desarrollo Web & Ciberseguridad</span>
+        <p>Estructuración del sitio, diseño de interfaz UI/UX e integración de estilos y scripts.</p>
+      </article>
+
+      <!-- INTEGRANTE 2: Pon su foto en img/integrante2.jpg y cambia el nombre en <h3> -->
+      <article class="card-miembro">
+        <div class="foto-miembro">
+          <img src="img/integrante2.jpg" alt="Integrante 2" onerror="this.src='img/logo.png'">
+        </div>
+        <h3>Nombre del Integrante 2</h3>
+        <span>Investigación ISO/IEC 27001</span>
+        <p>Desarrollo de contenidos sobre fundamentos y pilares de seguridad de la información.</p>
+      </article>
+
+      <!-- INTEGRANTE 3: Pon su foto en img/integrante3.jpg y cambia el nombre en <h3> -->
+      <article class="card-miembro">
+        <div class="foto-miembro">
+          <img src="img/integrante3.jpg" alt="Integrante 3" onerror="this.src='img/logo.png'">
+        </div>
+        <h3>Nombre del Integrante 3</h3>
+        <span>Análisis de Estructura SGSI</span>
+        <p>Organización de las cláusulas 4 a 10 de la norma y controles de seguridad.</p>
+      </article>
+
+      <!-- INTEGRANTE 4: Pon su foto en img/integrante4.jpg y cambia el nombre en <h3> -->
+      <article class="card-miembro">
+        <div class="foto-miembro">
+          <img src="img/integrante4.jpg" alt="Integrante 4" onerror="this.src='img/logo.png'">
+        </div>
+        <h3>Nombre del Integrante 4</h3>
+        <span>Proceso de Certificación</span>
+        <p>Investigación de etapas de auditoría, implementación y mejora continua.</p>
+      </article>
+
+      <!-- INTEGRANTE 5: Pon su foto en img/integrante5.jpg y cambia el nombre en <h3> -->
+      <article class="card-miembro">
+        <div class="foto-miembro">
+          <img src="img/integrante5.jpg" alt="Integrante 5" onerror="this.src='img/logo.png'">
+        </div>
+        <h3>Nombre del Integrante 5</h3>
+        <span>Preguntas Frecuentes & Pruebas</span>
+        <p>Redacción de dudas clave, revisión de enlaces y control de calidad del proyecto.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="footer-contenido">
+      <div class="footer-marca">
+        <img src="img/logo.png" alt="Logo NyE">
+        <p>Proyecto Académico NyE — Normas y Estándares de Ciberseguridad</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="javascript/script.js"></script>
+</body>
+</html>
