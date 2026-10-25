@@ -1,0 +1,68 @@
+/* proyecto.css -> <link rel="stylesheet" href="css/proyecto.css">
+   El original tenía llaves mal cerradas (header, footer y main quedaban
+   dentro de body y las reglas flex no se aplicaban). Corregido. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(41, 38, 38);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header {
+  top: 0;
+}
+
+footer {
+  bottom: 0;
+}
+
+main {
+  width: max-content;
+  max-width: 100%;
+  height: fit-content;
+  text-align: center;
+}
+
+h1 {
+  color: dodgerblue;
+}
+
+h2 {
+  color: royalblue;
+}
+
+/* Enlaces (orden LVHA: link, visited, hover) */
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: cornflowerblue;
+}
+
+a:visited {
+  color: skyblue;
+}
+
+a:hover {
+  color: steelblue;
+}

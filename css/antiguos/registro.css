@@ -1,0 +1,290 @@
+/* registro.css -> <link rel="stylesheet" href="css/registro.css">
+   Imágenes (carpeta img/): logo.png, mapaciber.png, facebook.png, gmail.png, link.png */
+
+:root {
+  --cian: #1ba6e6;
+  --azul-rey: #2a68ae;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #fff;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fira Sans", "Mukta", "Segoe UI", Roboto, Arial, sans-serif;
+  color: #111;
+  line-height: 1.3;
+}
+
+/* ===== Encabezado (oscuro a la izquierda, azul a la derecha) ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 58px;
+  padding: 4px 3.5% 4px 2.2%;
+  background: linear-gradient(90deg, #081a33 0, #0b2342 45%, var(--azul-rey) 52%, #2563a8 100%);
+  border-bottom: 4px solid var(--cian);
+}
+
+.logo {
+  display: block;
+  line-height: 0;
+}
+
+.logo img {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 3.5vw, 40px);
+}
+
+nav a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 47fr 53fr;
+}
+
+/* ===== Izquierda: ya tienes cuenta ===== */
+main > aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 128px;
+  padding: 30px 20px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 50%, #2563a8 0%, #174a85 25%, #0d2a55 60%, #0a1c35 100%);
+  border-bottom: 6px solid var(--cian);
+}
+
+main > aside p {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+main > aside a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 197px;
+  height: 36px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #4a4a4a 0%, #1b1b1b 50%, #0d0d0d 100%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+main > aside a:hover {
+  filter: brightness(1.3);
+}
+
+/* ===== Derecha: registro con mapa de circuitos de fondo ===== */
+main > section {
+  position: relative;
+  isolation: isolate;
+  padding: 14px 3% 40px;
+  text-align: center;
+  background: #fff;
+}
+
+main > section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("img/mapaciber.png") center / cover no-repeat;
+  opacity: 0.2;
+}
+
+h1 {
+  margin-bottom: 14px;
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25), 0 3px 4px rgba(0, 0, 0, 0.35);
+}
+
+/* Botones de redes sociales */
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+}
+
+.redes button {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.redes button:hover {
+  transform: scale(1.07);
+}
+
+.redes button:focus-visible {
+  outline: 3px solid var(--cian);
+  outline-offset: 3px;
+}
+
+.redes img {
+  display: block;
+  border-radius: 50%;
+}
+
+.redes button:nth-child(1) img { width: 96px;  height: 96px; }
+.redes button:nth-child(2)     { background: #fff; }
+.redes button:nth-child(2) img { width: 100px; height: 100px; }
+.redes button:nth-child(3) img { width: 104px; height: 104px; }
+
+main > section > p {
+  margin: 12px 0 29px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Formulario */
+form {
+  width: min(378px, 100%);
+  margin: 0 auto;
+  text-align: left;
+}
+
+form > div {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+form > div:last-of-type {
+  margin-bottom: 49px;
+}
+
+/* La etiqueta se ve dentro del campo y se oculta al escribir */
+label {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c9c9c9;
+  text-transform: lowercase;
+  pointer-events: none;
+}
+
+form > div:focus-within label,
+form > div:has(input:valid) label {
+  opacity: 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 42px;
+  padding: 0 16px;
+  background: #efefef;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  font: inherit;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
+}
+
+input:focus {
+  outline: 2px solid var(--cian);
+}
+
+form button[type="submit"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 197px;
+  height: 38px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #143460, #081a33);
+  color: #fff;
+  border: 0;
+  border-bottom: 3px solid #1d7fd1;
+  border-radius: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  font: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  filter: brightness(1.25);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 800px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    background: linear-gradient(90deg, #081a33, var(--azul-rey));
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  main > aside {
+    gap: 40px;
+    padding: 50px 20px;
+  }
+
+  .redes {
+    gap: 16px;
+  }
+
+  .redes button:nth-child(n) img {
+    width: 78px;
+    height: 78px;
+  }
+}

@@ -1,0 +1,46 @@
+/* ===== Nuestro equipo ===== */
+.equipo .equipo-lista{
+  list-style:none;margin:2rem 0 0;padding:0;
+  display:grid;gap:1.5rem;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+}
+.miembro{
+  text-align:center;padding:1.25rem 1rem 1.5rem;
+  border:1px solid color-mix(in srgb,currentColor 15%,transparent);
+  border-radius:16px;
+  background:color-mix(in srgb,currentColor 4%,transparent);
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+.miembro:hover,.miembro:focus-within{
+  transform:translateY(-6px);
+  border-color:var(--cian,#22d3ee);
+  box-shadow:0 10px 28px rgba(0,0,0,.18);
+}
+.miembro-foto{
+  position:relative;width:150px;height:150px;margin:0 auto 1rem;
+  border-radius:50%;overflow:hidden;
+  border:3px solid var(--cian,#22d3ee);
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--cian,#22d3ee) 20%,transparent);
+}
+.miembro-foto img{
+  width:100%;height:100%;object-fit:cover;object-position:center 25%;
+  display:block;transition:transform .4s ease;
+}
+.miembro:hover .miembro-foto img{transform:scale(1.06)}
+.miembro h3{margin:0 0 .25rem;font-size:1.05rem}
+.miembro .rol{margin:0;font-size:.9rem;opacity:.75}
+
+/* Entrada escalonada (solo si hay JS) */
+.js .miembro{opacity:0;transform:translateY(24px)}
+.js .miembro.visible{
+  opacity:1;transform:none;
+  transition:opacity .6s ease,transform .6s ease,border-color .3s,box-shadow .3s;
+  transition-delay:calc(var(--n,0) * 90ms);
+}
+.js .miembro.visible:hover,.js .miembro.visible:focus-within{
+  transform:translateY(-6px);transition-delay:0s;
+}
+@media (prefers-reduced-motion:reduce){
+  .js .miembro{opacity:1;transform:none}
+  .miembro,.miembro-foto img{transition:none}
+}

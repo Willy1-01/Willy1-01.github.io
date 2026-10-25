@@ -1,0 +1,230 @@
+/* que-es.css -> <link rel="stylesheet" href="css/que-es.css"> */
+
+:root {
+  --cian: #118AC5;
+  --gradiente-header: linear-gradient(to right, #051622 0%, #0a2e5c 35%, #185a9d 100%);
+  --tarjeta: rgba(255, 255, 255, 0.93);
+  --ancho-max: 1250px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: #111111;
+  background: #EDF3F9 url("img/ciberlineas.png") right center / 85% no-repeat fixed;
+  line-height: 1.3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* ===== Header ===== */
+header {
+  position: relative;
+  height: 97px;
+  padding: 0 50px;
+  background: var(--gradiente-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--cian);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+header .logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+header .enlaces-menu {
+  display: flex;
+  gap: 40px;
+}
+
+header .enlaces-menu a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* ===== Tarjeta principal y video ===== */
+main {
+  flex: 1;
+  padding: 60px 0 30px;
+}
+
+.hero-section {
+  width: 92%;
+  max-width: var(--ancho-max);
+  margin: 0 auto 60px;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  column-gap: 60px;
+  align-items: center;
+  background: var(--tarjeta);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero-section h1 {
+  margin-bottom: 35px;
+  font-size: 38px;
+  color: #000000;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero-section p {
+  font-size: 19px;
+  color: #222222;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Caja gris del video con marco cian */
+.video-link {
+  display: block;
+  width: 480px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.video-placeholder {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c4c4c4;
+  border: 5px solid #00b4d8;
+  border-radius: 16px;
+}
+
+.video-placeholder span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #444444;
+}
+
+/* ===== Tres pilares ===== */
+.pillars-section {
+  width: 92%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.pilar-card {
+  padding: 35px 30px;
+  background: var(--tarjeta);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+.pilar-card h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #000000;
+}
+
+.pilar-card p {
+  font-size: 15px;
+  color: #222222;
+  line-height: 1.45;
+}
+
+/* ===== Footer: botón atrás ===== */
+footer {
+  width: 92%;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 20px 0 50px;
+}
+
+footer .btn-atras {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 52px;
+  background: #0f3460;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(15, 52, 96, 0.3);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 992px) {
+  body {
+    background-size: cover;
+  }
+
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  header .enlaces-menu {
+    gap: 20px;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .video-link {
+    width: 100%;
+  }
+
+  .video-placeholder {
+    height: 250px;
+  }
+
+  .pillars-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

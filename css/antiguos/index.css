@@ -1,0 +1,225 @@
+/* index.css -> <link rel="stylesheet" href="css/index.css">
+   Imágenes: logo.png y candado.png (carpeta img/) */
+
+:root {
+  --azul-noche: #08162c;
+  --azul-medio: #0e2b57;
+  --azul-claro: #2a68ae;
+  --cian: #1ba6e6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #0c2340;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Fira Sans", "Mukta", "Segoe UI", Roboto, Arial, sans-serif;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* ===== Encabezado ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 58px;
+  padding: 4px 3.5% 4px 2.2%;
+  background: linear-gradient(90deg, var(--azul-noche) 0%, var(--azul-medio) 40%, var(--azul-claro) 100%);
+  border-bottom: 4px solid var(--cian);
+}
+
+.logo {
+  display: block;
+  line-height: 0;
+}
+
+.logo img {
+  display: block;
+  height: 38px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(16px, 3.5vw, 40px);
+}
+
+nav a {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 59fr 41fr;
+}
+
+/* ===== Izquierda: imagen del candado ===== */
+.imagen {
+  position: relative;
+  overflow: hidden;
+  background: #020b14;
+  min-height: 320px;
+}
+
+.imagen img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Derecha: panel de acceso ===== */
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  padding: 40px 4%;
+  text-align: center;
+  background: radial-gradient(circle at center, #0f3d6d 0%, #081e38 100%);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.4);
+}
+
+aside h1 {
+  max-width: 24rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.login,
+.registro {
+  width: 100%;
+  max-width: 23rem;
+}
+
+.login h2 {
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: 0 20px;
+  background: linear-gradient(145deg, #0b2747, #103966);
+  border: 1px solid #144272;
+  border-radius: 23px;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  font: inherit;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #8fb0d3;
+}
+
+input:focus {
+  outline: none;
+  border-color: #00d2ff;
+  box-shadow: 0 0 8px rgba(0, 210, 255, 0.5);
+}
+
+/* Etiquetas y botón "Ingresar" ocultos a la vista
+   (siguen disponibles para lectores de pantalla y con Tab) */
+label,
+button[type="submit"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+button[type="submit"]:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  clip: auto;
+  margin-top: 6px;
+  padding: 8px 22px;
+  background: #fff;
+  color: var(--azul-noche);
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 700;
+}
+
+.registro p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #a5c2f4;
+}
+
+.registro a {
+  display: block;
+  padding: 12px;
+  background: linear-gradient(145deg, #09203a, #0b2849);
+  border: 1px solid #10345c;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.registro a:hover {
+  border-color: #00d2ff;
+  transform: translateY(-1px);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .imagen {
+    min-height: 40vh;
+  }
+
+  aside {
+    padding: 50px 20px;
+  }
+}

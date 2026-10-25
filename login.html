@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar | NyE ISO/IEC 27001</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/pie.css">
+</head>
+<body>
+  <main class="login">
+    <section class="panel-visual">
+      <a class="logo" href="index.html"><img src="css/img/logo.png" alt="NyE, ir al inicio"></a>
+      <div>
+        <h1>Infórmate de este mundo digital, y sé parte de este futuro</h1>
+        <p>Accede a tu cuenta para seguir aprendiendo sobre la ISO/IEC 27001.</p>
+      </div>
+    </section>
+
+    <section class="panel-form">
+      <a class="volver" href="index.html">Volver al inicio</a>
+      <div class="caja">
+        <h2>Bienvenido de nuevo</h2>
+        <p class="sub">Ingresa con tu cuenta para continuar.</p>
+
+        <form action="#" method="post">
+          <div class="campo">
+            <label for="usuario">Usuario o correo electrónico</label>
+            <input type="text" id="usuario" name="usuario" placeholder="nombre@correo.com" autocomplete="username" required>
+          </div>
+          <div class="campo">
+            <label for="clave">Contraseña</label>
+            <div class="entrada">
+              <input type="password" id="clave" name="clave" placeholder="Tu contraseña" autocomplete="current-password" required>
+              <button type="button" class="ver" aria-pressed="false">Mostrar</button>
+            </div>
+          </div>
+          <div class="opciones">
+            <label><input type="checkbox" name="recordar"> Mantener la sesión iniciada</label>
+            <a href="contacto.html">¿Olvidaste tu contraseña?</a>
+          </div>
+          <button type="submit" class="principal">Ingresar</button>
+        </form>
+
+        <div class="separador"><span>o continúa con</span></div>
+        <div class="redes">
+          <button type="button"><img src="css/img/facebook.png" alt="">Facebook</button>
+          <button type="button"><img src="css/img/gmail.png" alt="">Gmail</button>
+          <button type="button"><img src="css/img/link.png" alt="">LinkedIn</button>
+        </div>
+
+        <p class="alta">¿No tienes una cuenta aún? <a href="registro.html">Regístrate</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="pie">
+    <div class="pie-columnas">
+      <div class="pie-marca">
+        <img class="pie-logo" src="css/img/logo.png" alt="NyE">
+        <p>NyE.of.cybersecurity</p>
+        <h3>Contacto</h3>
+        <a href="mailto:NyE.of.cybersecurity@tuproyecto.com">NyE.of.cybersecurity@tuproyecto.com</a>
+        <span>Lunes a viernes, 9:00 a 18:00</span>
+      </div>
+      <div><h3>Saber más</h3><a href="que-es.html">¿Qué es?</a><a href="estructura.html">Estructura</a><a href="certificacion.html">Certificación</a><a href="normativas.html">Normativas</a></div>
+      <div><h3>En la práctica</h3><a href="practica.html#riesgo">Simulador de riesgo</a><a href="practica.html#reto">Mini reto de seguridad</a><a href="practica.html#autoevaluacion">Autoevaluación rápida</a><a href="estructura.html#mapa">Mapa de cláusulas</a></div>
+      <div><h3>Ayuda</h3><a href="preguntas-frecuentes.html">Preguntas frecuentes</a><a href="contacto.html">Contáctanos</a></div>
+      <div><h3>Tu cuenta</h3><a href="login.html">Ingresar</a><a href="registro.html">Regístrate</a></div>
+    </div>
+    <div class="pie-base"><span>© 2026 NyE.of.cybersecurity</span><a href="#">Volver arriba</a></div>
+  </footer>
+  <script src="js/login.js"></script>
+  <script src="js/idioma.js"></script>
+  <script src="js/sesion.js"></script>
+</body>
+</html>

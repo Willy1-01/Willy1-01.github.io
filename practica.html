@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En la práctica | ISO/IEC 27001</title>
+  <link rel="stylesheet" href="css/sitio.css">
+  <link rel="stylesheet" href="css/efectos.css">
+  <link rel="stylesheet" href="css/pie.css">
+</head>
+<body class="pg-practica">
+  <div class="precarga" aria-hidden="true"><div class="p-mitad p-arriba"></div><div class="p-mitad p-abajo"></div><div class="p-centro"><svg class="p-svg" viewBox="0 20 200 170" aria-hidden="true"><g class="p-candado"><path d="M70 90V68a30 30 0 0 1 60 0V90"/><path d="M62 90H138a12 12 0 0 1 12 12V158a12 12 0 0 1-12 12H62a12 12 0 0 1-12-12V102a12 12 0 0 1 12-12Z"/><circle cx="100" cy="124" r="8"/><path d="M100 132V150"/></g><g class="p-datos"></g></svg><p class="p-texto">Protegiendo tu información…</p></div></div>
+  <header>
+    <a class="logo" href="index.html"><img src="css/img/logo.png" alt="NyE, ir al inicio"></a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="saber-mas.html">Saber más</a>
+      <a href="normativas.html">Normativas</a>
+      <a href="practica.html" class="actual">En la práctica</a>
+      <a href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+      <a href="contacto.html">Contáctanos</a>
+      <a class="acceso" href="login.html">Ingresar</a>
+      <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>La ISO 27001 en la práctica</h1>
+    <p>Explora cómo funciona un sistema de gestión de seguridad con ejemplos interactivos.</p>
+    <div class="acciones izq"><a class="btn btn-cian" href="#autoevaluacion">Haz una autoevaluación rápida</a><a class="btn btn-borde" href="estructura.html">Explora las 7 cláusulas</a></div>
+
+    <section class="sec">
+      <h2>El SGSI de un vistazo</h2>
+      <p>Toca cada pieza para ver qué aporta al sistema.</p>
+      <div class="sgsi">
+        <svg viewBox="0 0 460 420" role="group" aria-label="Diagrama del SGSI: contexto, riesgos, controles, auditoría y mejora continua alrededor de un escudo">
+          <circle class="il-tri" cx="230" cy="210" r="150"/>
+          <path class="il-escudo" d="M230 168 L270 183 V222 C270 250 250 266 230 275 C210 266 190 250 190 222 V183 Z"/>
+          <circle class="il-llave" cx="230" cy="213" r="8"/><rect class="il-llave" x="226" y="217" width="8" height="18" rx="3"/>
+          <g class="nodo on" tabindex="0" role="button" transform="translate(230 60)"><circle r="30"/><use href="#i-target" x="-14" y="-14" width="28" height="28"/><text class="il-txt" y="52">Contexto</text></g>
+          <g class="nodo" tabindex="0" role="button" transform="translate(373 164)"><circle r="30"/><use href="#i-alert" x="-14" y="-14" width="28" height="28"/><text class="il-txt" y="52">Riesgos</text></g>
+          <g class="nodo" tabindex="0" role="button" transform="translate(318 331)"><circle r="30"/><use href="#i-sliders" x="-14" y="-14" width="28" height="28"/><text class="il-txt" y="52">Controles</text></g>
+          <g class="nodo" tabindex="0" role="button" transform="translate(142 331)"><circle r="30"/><use href="#i-clip" x="-14" y="-14" width="28" height="28"/><text class="il-txt" y="52">Auditoría</text></g>
+          <g class="nodo" tabindex="0" role="button" transform="translate(87 164)"><circle r="30"/><use href="#i-loop" x="-14" y="-14" width="28" height="28"/><text class="il-txt" y="52">Mejora continua</text></g>
+        </svg>
+        <div class="sgsi-info" aria-live="polite"><h3>Contexto</h3><p>Entiende tu organización, quién depende de tu información y qué requisitos debes cumplir. Aquí se define el alcance del sistema.</p></div>
+      </div>
+    </section>
+
+    <section class="sec" id="riesgo">
+      <h2>Simulador de riesgo: una cuenta comprometida</h2>
+      <p>Una persona del equipo cae en un correo falso y su cuenta queda en manos de un atacante. Activa controles y mira cómo baja el riesgo.</p>
+      <div class="sim">
+        <div class="sim-controles">
+          <label><input type="checkbox" data-p="2"><span class="tx"><strong>Autenticación multifactor</strong><em>Aunque roben la contraseña, falta el segundo factor.</em></span></label>
+          <label><input type="checkbox" data-p="1"><span class="tx"><strong>Capacitación contra el phishing</strong><em>El personal reconoce y reporta correos sospechosos.</em></span></label>
+          <label><input type="checkbox" data-p="1"><span class="tx"><strong>Contraseñas únicas con gestor</strong><em>Una clave robada no abre otras cuentas.</em></span></label>
+          <label><input type="checkbox" data-i="1"><span class="tx"><strong>Alertas de inicio de sesión inusual</strong><em>Se detecta rápido el acceso extraño.</em></span></label>
+          <label><input type="checkbox" data-i="1"><span class="tx"><strong>Copias de seguridad y recuperación</strong><em>Si algo se daña, se restaura.</em></span></label>
+        </div>
+        <div class="sim-res">
+          <div class="medidor"><span>Probabilidad</span><div class="barra"><i id="barP"></i></div><b id="valP"></b></div>
+          <div class="medidor"><span>Impacto</span><div class="barra"><i id="barI"></i></div><b id="valI"></b></div>
+          <div class="nivel" id="nivel"><small>Nivel de riesgo</small><strong id="nivelTxt"></strong></div>
+          <p id="simTxt"></p>
+        </div>
+      </div>
+    </section>
+      <section class="sec" id="controles">
+      <h2>Controles: preventivo, detectivo y correctivo</h2>
+      <p>Cada tipo de control actúa en un momento distinto del incidente. Elige uno para ver un ejemplo.</p>
+      <div data-tabs><div class="tablist" role="tablist"><button class="tab" role="tab" type="button">Preventivo</button><button class="tab" role="tab" type="button">Detectivo</button><button class="tab" role="tab" type="button">Correctivo</button></div><div class="panel" role="tabpanel"><p><strong>Qué hace:</strong> evita que el incidente ocurra.</p><p><strong>Ejemplo:</strong> con autenticación multifactor, aunque roben una contraseña el atacante no puede entrar.</p></div><div class="panel" role="tabpanel"><p><strong>Qué hace:</strong> avisa cuando algo sospechoso está pasando.</p><p><strong>Ejemplo:</strong> una alerta de inicio de sesión desde un país inusual permite actuar en minutos.</p></div><div class="panel" role="tabpanel"><p><strong>Qué hace:</strong> limita el daño y recupera la normalidad.</p><p><strong>Ejemplo:</strong> restaurar desde una copia de seguridad probada y cambiar las credenciales afectadas.</p></div></div>
+      <p class="nota-c">Un buen sistema combina los tres tipos.</p>
+    </section>
+
+    <section class="sec" id="reto">
+      <h2>Mini reto de seguridad</h2>
+      <p>Recibes un correo urgente de «tu jefe»: pide una transferencia y que no se lo comentes a nadie. ¿Qué haces?</p>
+      <div class="reto">
+        <button type="button" data-r="0">Hago la transferencia: es una orden de mi jefe.</button>
+        <button type="button" data-r="1">Verifico por otro canal, como una llamada, antes de actuar.</button>
+        <button type="button" data-r="2">Respondo al correo pidiendo más detalles.</button>
+      </div>
+      <div class="expl" aria-live="polite">
+        <p hidden>Riesgo alto: la urgencia y el secreto son señales típicas de fraude. Nunca actúes solo con ese correo.</p>
+        <p hidden>¡Correcto! Verificar por un canal distinto rompe el engaño. Después, reporta el correo al equipo de seguridad.</p>
+        <p hidden>Mejor que obedecer, pero respondes por el mismo canal que el atacante podría controlar. Verifica por otro medio.</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="banda-clara">
+    <div class="contenedor">
+      <h2>Casos del día a día</h2>
+      <p class="intro-c">Así responde un sistema de gestión a situaciones reales.</p>
+      <div class="practica">
+        <article><svg class="ico"><use href="#i-laptop"/></svg><h3>¿Qué pasa si se pierde una laptop?</h3><p>Con el disco cifrado y bloqueo remoto, los datos siguen protegidos. El incidente se registra y se revisa para mejorar.</p></article>
+        <article><svg class="ico"><use href="#i-lock"/></svg><h3>¿Cómo se protege la información de clientes?</h3><p>Se limita el acceso a quien lo necesita, se cifra y se registra quién consulta qué.</p></article>
+        <article><svg class="ico"><use href="#i-users"/></svg><h3>¿Qué ocurre cuando alguien deja la empresa?</h3><p>Se retiran sus accesos el mismo día, se recuperan los equipos y se recuerdan sus obligaciones de confidencialidad.</p></article>
+        <article><svg class="ico"><use href="#i-link"/></svg><h3>¿Y si un proveedor maneja nuestros datos?</h3><p>Se evalúa antes de contratarlo, se fijan requisitos de seguridad por contrato y se revisan con regularidad.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contenedor sec" id="autoevaluacion">
+    <h2>Autoevaluación rápida</h2>
+    <p>Marca lo que tu organización ya hace hoy. Es solo una orientación, no una auditoría.</p>
+    <div class="auto">
+      <label><input type="checkbox">Sabe qué información es importante y dónde está.</label>
+      <label><input type="checkbox">Evalúa los riesgos de seguridad de forma periódica.</label>
+      <label><input type="checkbox">Tiene una política de seguridad aprobada por la dirección.</label>
+      <label><input type="checkbox">Capacita al personal en seguridad al menos una vez al año.</label>
+      <label><input type="checkbox">Hace copias de seguridad y prueba que se pueden recuperar.</label>
+      <label><input type="checkbox">Tiene un plan para responder a incidentes.</label>
+      <div class="auto-res">
+        <strong id="autoNum"></strong>
+        <div class="barra"><i id="autoBar"></i></div>
+        <p id="autoTxt"></p>
+        <div class="acciones izq"><a class="btn btn-cian" href="estructura.html">Explora las 7 cláusulas</a><a class="btn btn-borde" href="certificacion.html">Ver el camino a la certificación</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="pie">
+    <div class="pie-columnas">
+      <div class="pie-marca">
+        <img class="pie-logo" src="css/img/logo.png" alt="NyE">
+        <p>NyE.of.cybersecurity</p>
+        <h3>Contacto</h3>
+        <a href="mailto:NyE.of.cybersecurity@tuproyecto.com">NyE.of.cybersecurity@tuproyecto.com</a>
+        <span>Lunes a viernes, 9:00 a 18:00</span>
+      </div>
+      <div><h3>Saber más</h3><a href="que-es.html">¿Qué es?</a><a href="estructura.html">Estructura</a><a href="certificacion.html">Certificación</a><a href="normativas.html">Normativas</a></div>
+      <div><h3>En la práctica</h3><a href="practica.html#riesgo">Simulador de riesgo</a><a href="practica.html#reto">Mini reto de seguridad</a><a href="practica.html#autoevaluacion">Autoevaluación rápida</a><a href="estructura.html#mapa">Mapa de cláusulas</a></div>
+      <div><h3>Ayuda</h3><a href="preguntas-frecuentes.html">Preguntas frecuentes</a><a href="contacto.html">Contáctanos</a></div>
+      <div><h3>Tu cuenta</h3><a href="login.html">Ingresar</a><a href="registro.html">Regístrate</a></div>
+    </div>
+    <div class="pie-base"><span>© 2026 NyE.of.cybersecurity</span><a href="#">Volver arriba</a></div>
+  </footer>
+
+  <div class="menu-pantalla" id="menu" aria-hidden="true">
+    <ol>
+      <li style="--i:0"><a href="index.html">Inicio</a></li>
+      <li style="--i:1"><a href="saber-mas.html">Saber más</a></li>
+      <li style="--i:2"><a href="normativas.html">Normativas</a></li>
+      <li style="--i:3"><a href="practica.html">En la práctica</a></li>
+      <li style="--i:4"><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+      <li style="--i:5"><a href="contacto.html">Contáctanos</a></li>
+      <li style="--i:6"><a href="login.html">Ingresar</a></li>
+    </ol>
+    <p>NyE.of.cybersecurity</p>
+  </div>
+  <script src="js/efectos.js"></script>
+  <script src="js/practica.js"></script>
+  <script src="js/interactivo.js"></script>
+  <script src="js/idioma.js"></script>
+  <script src="js/sesion.js"></script>
+</body>
+</html>

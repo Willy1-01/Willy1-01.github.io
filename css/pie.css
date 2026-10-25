@@ -1,0 +1,12 @@
+/* pie.css -> pie de página común a todas las páginas */
+footer.pie { width: 100%; max-width: none; margin: 60px 0 0; padding: 48px 6% 24px; background: #0c0f14; border-top: 4px solid #1ba6e6; color: #8fa0b5; }
+.pie-columnas { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 32px; max-width: 1280px; margin: 0 auto; }
+footer.pie h3 { margin-bottom: 10px; color: #eef2f7; font-size: 1rem; }
+footer.pie a, footer.pie span, footer.pie p { display: block; margin: 0; padding: 6px 0; background: none; border: 0; border-radius: 0; color: #8fa0b5; font-size: .95rem; font-weight: 400; overflow-wrap: anywhere; }
+footer.pie a:hover { background: none; color: #fff; text-decoration: underline; }
+.pie-marca h3 { margin-top: 18px; }
+.pie-logo { display: block; width: auto; height: 34px; margin-bottom: 8px; }
+.pie-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; max-width: 1280px; margin: 28px auto 0; padding-top: 18px; border-top: 1px solid rgba(255, 255, 255, .12); }
+.pie-base a, .pie-base span { padding: 4px 0; }
+@media (max-width: 900px) { .pie-columnas { grid-template-columns: 1fr 1fr; } .pie-marca { grid-column: 1 / -1; } }
+@media (max-width: 480px) { .pie-columnas { grid-template-columns: 1fr; } footer.pie a { padding: 10px 0; } }

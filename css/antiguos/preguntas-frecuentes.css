@@ -1,0 +1,202 @@
+/* preguntas-frecuentes.css -> <link rel="stylesheet" href="css/preguntas-frecuentes.css"> */
+
+:root {
+  --azul-noche: #0D233A;
+  --azul-rey: #2461A0;
+  --azul-brillante: #0087FF;
+  --gradiente-atras: linear-gradient(to right, var(--azul-noche) 0%, var(--azul-rey) 100%);
+  --gradiente-adelante: linear-gradient(to right, var(--azul-rey) 0%, var(--azul-noche) 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  color: #000000;
+  /* Renombra "fondo PF.png" a fondo-pf.png para evitar espacios */
+  background: url("img/fondo-pf.png") center / cover no-repeat fixed;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* ===== Header ===== */
+header {
+  height: 86px;
+  padding: 0 40px;
+  background: linear-gradient(to right, var(--azul-noche) 31%, var(--azul-rey) 52%);
+  display: flex;
+  align-items: center;
+  border-bottom: 8px solid #118ac5;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+header .logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+header .menu-links {
+  display: flex;
+  gap: 40px;
+}
+
+header .menu-links a {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+header .menu-links a:hover,
+header .menu-links a.active {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ===== Contenido ===== */
+main {
+  flex: 1;
+}
+
+main > section {
+  padding: 25px 40px 20px;
+}
+
+h1 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* Preguntas desplegables */
+details {
+  margin-bottom: 24px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 15px;
+  transition: border-color 0.2s ease;
+}
+
+details[open] {
+  border: 2px solid var(--azul-brillante);
+}
+
+summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 73px;
+  padding: 12px 24px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.3;
+  list-style: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details p {
+  padding: 4px 24px 22px;
+  font-size: 20px;
+  color: #333333;
+}
+
+/* ===== Footer: botones ===== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px 30px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 53px;
+  color: #FFFFFF;
+  font-size: 24px;
+  border-radius: 50px;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+footer a:first-child {
+  background: var(--gradiente-atras);
+}
+
+footer a:last-child {
+  background: var(--gradiente-adelante);
+}
+
+footer a:hover {
+  opacity: 0.9;
+}
+
+footer a:active {
+  transform: scale(0.98);
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 700px) {
+  header {
+    height: auto;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  main > section {
+    padding: 20px;
+  }
+
+  summary {
+    font-size: 18px;
+  }
+
+  details p {
+    font-size: 16px;
+  }
+
+  footer a {
+    width: 130px;
+    font-size: 18px;
+  }
+}
